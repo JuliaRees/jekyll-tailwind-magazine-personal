@@ -38,7 +38,25 @@ seo:
 
 </section>
 
-<!--------Upcoming Travel Section----------->
+<!--------Upcoming Travel Section (data file later)----------->
 
-{% include upcoming-travels.html %}
 
+
+<!--------Featured Blog Posts----------->
+
+<section class="p-5p">
+
+  <h3 class="uppercase text-4xl text-center"> Recently on the blog </h3>
+
+  <div class="grid grid-cols-4">
+
+    {% for post in site.posts limit:30 %}
+
+      {% include blog-loop-item.html %}
+
+    {% endfor %}
+
+  </div>
+
+
+</section>

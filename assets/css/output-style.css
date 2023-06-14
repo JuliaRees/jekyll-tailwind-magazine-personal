@@ -411,42 +411,34 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.absolute {
+  position: absolute;
+}
 .relative {
   position: relative;
+}
+.inset-0 {
+  inset: 0px;
 }
 .right-\[10vw\] {
   right: 10vw;
 }
-.right-\[8vw\] {
-  right: 8vw;
-}
-.right-\[12vw\] {
-  right: 12vw;
-}
-.right-\[6vw\] {
-  right: 6vw;
-}
 .col-span-1 {
   grid-column: span 1 / span 1;
+}
+.m-4 {
+  margin: 1rem;
 }
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-.mt-0 {
-  margin-top: 0px;
-}
-.mt-2 {
-  margin-top: 0.5rem;
-}
-.mt-4 {
-  margin-top: 1rem;
-}
-.mt-6 {
-  margin-top: 1.5rem;
 }
 .mt-8 {
   margin-top: 2rem;
@@ -460,8 +452,17 @@ video {
 .grid {
   display: grid;
 }
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+.h-full {
+  height: 100%;
+}
 .min-h-50 {
   min-height: 50vh;
+}
+.min-h-60 {
+  min-height: 60vh;
 }
 .min-h-\[60\] {
   min-height: 60;
@@ -469,8 +470,32 @@ video {
 .min-h-\[80\] {
   min-height: 80;
 }
+.w-96 {
+  width: 24rem;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-screen-lg {
+  max-width: 1024px;
+}
+.max-w-screen-xl {
+  max-width: 1280px;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .flex-nowrap {
   flex-wrap: nowrap;
@@ -494,6 +519,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(212 209 205 / var(--tw-bg-opacity));
 }
+.bg-dark {
+  background-color: rgb(63 63 70);;
+}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -503,6 +531,10 @@ video {
 }
 .bg-center {
   background-position: center;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-4 {
   padding: 1rem;
@@ -543,6 +575,9 @@ video {
 }
 .uppercase {
   text-transform: uppercase;
+}
+.text-light {
+  color: rgb(244 244 245);;
 }
 
 /* Custom CSS */
@@ -588,6 +623,8 @@ p {
     margin-bottom: 2rem;
 }
 
+
+
 /* ----------- CUSTOM STYLES --------- */
 
 .button {
@@ -597,6 +634,13 @@ p {
 }
 
 @media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+  .md\:columns-3 {
+    -moz-columns: 3;
+         columns: 3;
+  }
   .md\:flex-wrap {
     flex-wrap: wrap;
   }

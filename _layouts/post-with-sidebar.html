@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<section class="p-8">
+    <h1> {{page.title}} </h1>
+    <p> By {{page.author}} </p>
+</section>
+
+
+<section class="p-8 md:flex">
+
+    <!-- This div holds the main blog content -->
+    <div class="p-4 m-4">
+        {{ content }}
+    </div>
+
+    <!-- This div holds our sidebar -->
+    <div class="w-96 shrink-0">
+
+        <div class="p-4 m-4">
+            <p> This is a little box on the sidebar. </p>
+        </div>
+
+        <div class="p-4 m-4">
+            <p> This is another little box on the sidebar. </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- This is a placeholder section to later add the related posts -->
+
+<section class="p-8">
+    <p> Add related posts include here later </p>
+</section>
