@@ -1,0 +1,44 @@
+---
+layout: default
+title: Homepage
+background-position: bg-center
+text-position: items-center
+banner-height: min-h-[80]
+banner-image: /images/travel-1.jpg
+heading: A whole new world
+sub-heading: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
+seo:
+  title: 
+  description:
+  social_image:
+  twitter_card:
+  keywords:
+  hide-from-google: false
+---
+
+<!--------Header Banner----------->
+
+{% include header-banner.html %}
+
+<!--------Text Section----------->
+
+<section class="grid grid-cols-2 p-5p bg-white">
+
+  <div style="background-image: url('/images/travel-3.jpg')" class="col-span-1 min-h-50"> </div>
+
+  <div class="col-span-1 p-6">
+
+  <h2 class="text-6xl bg-[#d4d1cd] relative max-w-s right-[10vw] p-8 text-center my-2"> A fascinating heading about the site. </h2>
+  
+  <p class="pr-[20%] mt-8"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima libero, commodi harum sit exercitationem doloribus amet sequi reiciendis? Dolore velit rerum dolores enim cupiditate harum optio explicabo delectus aliquam eius.</p>
+  
+  <a href="#" class="text-2xl border-b-4"> Read more </a>
+  
+  </div>
+
+</section>
+
+<!--------Upcoming Travel Section----------->
+
+{% include upcoming-travels.html %}
+
