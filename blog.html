@@ -1,14 +1,44 @@
 ---
 layout: default
+title: Blog Collection
+background-position: bg-center
+text-position: items-center
+banner-height: min-h-80
+banner-image: /images/travel-5.jpg
+heading: Exploring Sumbawa
+sub-heading: Nature teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
+banner_url: https://www.google.com
+seo:
+  title: 
+  description:
+  social_image:
+  twitter_card:
+  keywords:
+  hide-from-google: false
 ---
 
-<section class="p-8">
+<!--------Header Banner----------->
 
-    {% for post in site.posts %}
+{% include header-banner.html %}
 
-    <a href="{{post.url}}"> {{ post.title }} </a>
 
-    {% endfor %}
+<!--------Blog Archive Section----------->
 
+<section class="p-5p">
+
+    <h3 class="uppercase text-4xl text-center p-5p"> Recently on the blog </h3>
+
+    <div class="max-w-screen-xl mx-auto md:columns-3">
+
+        {% for post in site.posts limit:30 %}
+
+        {% include blog-loop-aspect-ratio.html %}
+
+        {% endfor %}
+
+
+
+
+    </div>
 
 </section>

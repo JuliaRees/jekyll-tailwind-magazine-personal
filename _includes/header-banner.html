@@ -1,8 +1,16 @@
 <!--  image banner block  -->
-<section class="p-5p bg-cover {{page.background-position}} {{page.banner-height}} {{page.text-position}} {{page.text-color}} flex justify-center" style="background-image: url('{{page.banner-image}}')">
+<section class="p-5p bg-cover {{page.background-position}} {{page.banner-height}} {{page.text-position}} {{page.text-color}} flex " style="background-image: url('{{page.banner-image}}')">
     <div> 
-       <h2 class="text-4xl font-light text-center mb-2"> {{page.heading}} </h2> 
-       <h3 class="text-2xl font-light text-center"> {{page.sub-heading}} </h3> 
+       <h2 class="text-9xl text-white mb-2 max-w-2xl"> {{page.heading}} </h2> 
+       <h3 class="text-2xl text-white max-w-md"> {{page.sub-heading}} </h3> 
+
+        
+       {% if page.banner_url %}
+	
+	   <a href="{{banner_url}}" class="text-white text-xl mt-2"> Read more </a> 
+
+        {% endif %}
+
     </div> 
 </section> 
 

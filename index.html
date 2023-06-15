@@ -3,7 +3,7 @@ layout: default
 title: Homepage
 background-position: bg-center
 text-position: items-center
-banner-height: min-h-[80]
+banner-height: min-h-80
 banner-image: /images/travel-1.jpg
 heading: A whole new world
 sub-heading: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
@@ -24,7 +24,7 @@ seo:
 
 <section class="grid grid-cols-2 p-5p bg-white">
 
-  <div style="background-image: url('/images/travel-3.jpg')" class="col-span-1 min-h-50"> </div>
+  <div style="background-image: url('/images/travel-3.jpg')" class="col-span-1 min-h-60"> </div>
 
   <div class="col-span-1 p-6">
 
@@ -38,22 +38,44 @@ seo:
 
 </section>
 
-<!--------Upcoming Travel Section (data file later)----------->
+<!--------Futher Text Section----------->
 
+
+<section class="grid grid-cols-2 p-5p bg-white">
+
+  <div class="col-span-1 p-6">
+
+    <h2 class="text-6xl max-w-s"> A fascinating heading about the site. </h2>
+    
+    <p class="pr-[20%] mt-8"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima libero, commodi harum sit exercitationem doloribus amet sequi reiciendis? Dolore velit rerum dolores enim cupiditate harum optio explicabo delectus aliquam eius.</p>
+    
+    <a href="#" class="text-2xl border-b-4"> Read more </a>
+    
+  </div>
+
+  <div style="background-image: url('/images/travel-5.jpg')" class="col-span-1 min-h-60"> </div>
+
+  
+
+</section>
 
 
 <!--------Featured Blog Posts----------->
 
 <section class="p-5p">
 
-  <h3 class="uppercase text-4xl text-center"> Recently on the blog </h3>
+  <h3 class="uppercase text-4xl text-center p-5p"> Recently on the blog... </h3>
 
-  <div class="grid grid-cols-4">
+  <div class="grid grid-cols-3">
 
-    {% for post in site.posts limit:30 %}
+    
 
-      {% include blog-loop-item.html %}
+    {% assign featured_posts = site.posts | where: 'featured', true %}
 
+        {% for post in featured_posts limit:3 %} <!----Insert Slider later---->
+
+        {% include blog-loop-item.html %}
+        
     {% endfor %}
 
   </div>

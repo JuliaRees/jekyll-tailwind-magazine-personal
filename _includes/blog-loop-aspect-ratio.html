@@ -1,0 +1,25 @@
+
+<a class="post-item p-2 break-inside-avoid block mb-4"
+href="{{ post.url }}">
+    <div class="bg-cover 
+    {% cycle 'aspect-square', 'aspect-portrait', 'aspect-landscape', %}"
+    style="background-image:url( '{{ post.featured_image }}' );"> </div>
+    
+    <div class="p-4 relative bg-white">
+
+        <h2 class="mt-1 text-3xl"> {{ post.title }}</h2>
+
+        <p class="uppercase text-xs pt-3 tracking-wide"> {{ post.description }} </p>
+
+        <span href=" {{post.url}}" class="uppercase text-1xl border-b-2  border-black inline-block mb-2 font-serif"> Read more </span>
+
+        <p class="uppercase text-xs">
+
+            {% for item in post.categories %}
+                <span class="tag mr-2"> {{item}} </span>
+            {% endfor %}
+        </p>    
+
+    </div>
+
+</a>

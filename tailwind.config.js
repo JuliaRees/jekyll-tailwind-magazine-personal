@@ -23,8 +23,8 @@ module.exports = {
       '9xl': ['8rem', '1'],
     },
     fontFamily: {
-      sans: ['Figtree', 'sans-serif'],
-      serif: ['Playfair Display', 'serif'],
+      sans: ['Montserrat', 'sans-serif'], 
+      serif: ['Italiana', 'serif'],
     },
     extend: {
       lineHeight: {

@@ -33,7 +33,7 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: Figtree, sans-serif; /* 4 */
+  font-family: Montserrat, sans-serif; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
 }
@@ -429,16 +429,28 @@ video {
 .m-4 {
   margin: 1rem;
 }
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
 }
 .mt-8 {
   margin-top: 2rem;
@@ -446,11 +458,20 @@ video {
 .block {
   display: block;
 }
+.inline-block {
+  display: inline-block;
+}
 .flex {
   display: flex;
 }
 .grid {
   display: grid;
+}
+.aspect-landscape {
+  aspect-ratio: 3 / 2;
+}
+.aspect-portrait {
+  aspect-ratio: 4/5;
 }
 .aspect-square {
   aspect-ratio: 1 / 1;
@@ -458,11 +479,11 @@ video {
 .h-full {
   height: 100%;
 }
-.min-h-50 {
-  min-height: 50vh;
-}
 .min-h-60 {
   min-height: 60vh;
+}
+.min-h-80 {
+  min-height: 80vh;
 }
 .min-h-\[60\] {
   min-height: 60;
@@ -476,14 +497,24 @@ video {
 .w-full {
   width: 100%;
 }
-.max-w-screen-lg {
-  max-width: 1024px;
+.max-w-2xl {
+  max-width: 42rem;
+}
+.max-w-md {
+  max-width: 28rem;
 }
 .max-w-screen-xl {
   max-width: 1280px;
 }
+.max-w-full {
+  max-width: 100%;
+}
 .shrink-0 {
   flex-shrink: 0;
+}
+.break-inside-avoid {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -493,9 +524,6 @@ video {
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .flex-nowrap {
   flex-wrap: nowrap;
@@ -512,8 +540,15 @@ video {
 .overflow-x-scroll {
   overflow-x: scroll;
 }
+.border-b-2 {
+  border-bottom-width: 2px;
+}
 .border-b-4 {
   border-bottom-width: 4px;
+}
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .bg-\[\#d4d1cd\] {
   --tw-bg-opacity: 1;
@@ -536,8 +571,14 @@ video {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.p-2 {
+  padding: 0.5rem;
+}
 .p-4 {
   padding: 1rem;
+}
+.p-5 {
+  padding: 1.25rem;
 }
 .p-5p {
   padding: 5%;
@@ -551,12 +592,28 @@ video {
 .pr-\[20\%\] {
   padding-right: 20%;
 }
+.pt-2 {
+  padding-top: 0.5rem;
+}
+.pt-5p {
+  padding-top: 5%;
+}
+.pt-3 {
+  padding-top: 0.75rem;
+}
 .text-center {
   text-align: center;
+}
+.font-serif {
+  font-family: Italiana, serif;
 }
 .text-2xl {
   font-size: 1.5rem;
   line-height: 1.2;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 1;
 }
 .text-4xl {
   font-size: 2.25rem;
@@ -570,14 +627,30 @@ video {
   font-size: 3.75rem;
   line-height: 1;
 }
-.font-light {
-  font-weight: 300;
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1.2;
 }
 .uppercase {
   text-transform: uppercase;
 }
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
 .text-light {
   color: rgb(244 244 245);;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /* Custom CSS */
@@ -611,16 +684,14 @@ div {
 
 body {
     font-weight: 300;
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #d4d1cd;
 }
 
-h1, h2, h3, h4, .logo {
-    font-family: 'Playfair Display', serif;
-}
+
 
 p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 
