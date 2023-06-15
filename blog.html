@@ -1,13 +1,14 @@
 ---
 layout: default
 title: Blog Collection
-background-position: bg-center
+background-position: bg-bottom
 text-position: items-center
-banner-height: min-h-80
-banner-image: /images/travel-5.jpg
+banner-height: min-h-100
+banner-image: /images/blog-bg-10.jpg
 heading: Exploring Sumbawa
 sub-heading: Nature teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
 banner_url: https://www.google.com
+link-text: read more
 seo:
   title: 
   description:
@@ -19,7 +20,7 @@ seo:
 
 <!--------Header Banner----------->
 
-{% include header-banner.html %}
+{% include quarter-header-banner.html %}
 
 
 <!--------Blog Archive Section----------->
@@ -35,9 +36,6 @@ seo:
         {% include blog-loop-aspect-ratio.html %}
 
         {% endfor %}
-
-
-
 
     </div>
 

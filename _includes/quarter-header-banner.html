@@ -2,14 +2,14 @@
 <section class="grid grid-cols-5 {{page.banner-height}} {{page.text-color}}">
     <div class="col-span-1"> <!----Intentionally empty-----> </div>
     
-    <div class="col-span-4 bg-cover p-5p flex {{page.background-position}} {{page.text-position}}" style="background-image:url('{{page.banner-image}}')">
+    <div class="col-span-4 bg-cover p-5p flex {{page.background-position}} {{page.text-position}}" style="background-image:url('{{page.banner-image}}') ">
         <div class="-ml-[25%]">
             <h2 class="text-[10vw] max-w-[800px] leading-[.9] text-left text-white mb-7 font-serif"> {{page.heading}} </h2> 
             <h3 class="text-3xl max-w-[500px] text-white text-left mb-3 uppercase"> {{page.sub-heading}} </h3> 
 
             {% if page.banner_url %}
 	
-	        <a href="{{banner_url}}" class="text-white text-3xl max-w-[500px] text-left uppercase border-b-2 border-black"> {{page.link-text}} </a> 
+	        <a href="{{banner_url}}" class="text-3xl max-w-[500px] text-left uppercase border-b-2 border-black"> {{page.link-text}} </a> 
 
             {% endif %}
 

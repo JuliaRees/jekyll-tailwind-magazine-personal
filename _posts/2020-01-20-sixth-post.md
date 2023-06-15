@@ -5,7 +5,8 @@ date: 2020-01-20
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sunt earum, ab, eum dolore perspiciatis tenetur alias aspernatur
 author: James
 featured: true
-categories: [self care]
+categories: 
+ - travel
 featured_image: /images/travel-2.jpg
 banner-image: /images/travel-4.jpg
 text-position: items-center
@@ -20,10 +21,16 @@ seo:
     hide-from-google: false
 ---
 
-## Adventures in Bali 
+## How to explore the desert 
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sunt earum, ab, eum dolore perspiciatis tenetur alias aspernatur impedit fugiat quos esse accusamus nesciunt accusantium labore provident hic ex est?
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sunt earum, ab, eum dolore perspiciatis tenetur alias aspernatur impedit fugiat quos esse accusamus nesciunt accusantium labore provident hic ex est?
+
+<img src="/images/blog-bg-8.jpg" alt="">
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sunt earum, ab, eum dolore perspiciatis tenetur alias aspernatur impedit fugiat quos esse accusamus nesciunt accusantium labore provident hic ex est?
+
+> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sunt earum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sunt earum, ab, eum dolore perspiciatis tenetur alias aspernatur impedit fugiat quos esse accusamus nesciunt accusantium labore provident hic ex est?  
+

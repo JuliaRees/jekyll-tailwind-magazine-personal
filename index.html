@@ -4,7 +4,7 @@ title: Homepage
 background-position: bg-center
 text-position: items-center
 banner-height: min-h-80
-banner-image: /images/blog-21.png
+banner-image: /images/blog-bg-12.jpg
 heading: A whole new world
 sub-heading: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
 seo:
@@ -24,15 +24,17 @@ seo:
 
 <section class="grid grid-cols-2 p-5p bg-light">
 
-  <div style="background-image: url('/images/blog-22.png')" class="col-span-1 min-h-60"> </div>
+  <div style="background-image: url('/images/blog-bg-13.jpg')" class="col-span-1 min-h-90"> </div>
 
-  <div class="col-span-1 py-10">
+  <div class="col-span-1 p-5p flex items-center">
+    <div>
 
-  <h2 class="text-6xl bg-[#d4d1cd] relative max-w-s right-[10vw] p-8 text-center my-2 font-serif"> A fascinating heading about the site. </h2>
-  
-  <p class="pr-[20%] mt-8"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima libero, commodi harum sit exercitationem doloribus amet sequi reiciendis? Dolore velit rerum dolores enim cupiditate harum optio explicabo delectus aliquam eius.</p>
-  
-  <a href="#" class="text-2xl border-b-2 border-black uppercase font-serif"> Read more </a>
+      <h2 class="text-6xl bg-[#d4d1cd] relative w-[30rem] left-[-14rem] p-8 text-center my-2 font-serif"> A fascinating heading about the site. </h2>
+      
+      <p class="pr-[20%] mt-8"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima libero, commodi harum sit exercitationem doloribus amet sequi reiciendis? Dolore velit rerum dolores enim cupiditate harum optio explicabo delectus aliquam eius.</p>
+      
+      <a href="#" class="text-2xl border-b-2 border-black uppercase font-serif"> Read more </a>
+    </div>
   
   </div>
 
@@ -49,26 +51,27 @@ seo:
     
     <p class="pr-[20%] mt-8"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima libero, commodi harum sit exercitationem doloribus amet sequi reiciendis? Dolore velit rerum dolores enim cupiditate harum optio explicabo delectus aliquam eius.</p>
     
-    <a href="#" class="text-2xl border-b-4"> Read more </a>
+    <a href="#" class="text-2xl border-b-2 border-black uppercase font-serif"> Read more </a>
     
   </div>
 
-  <div style="background-image: url('/images/travel-5.jpg')" class="col-span-1 min-h-60"> </div>
+  <div style="background-image: url('/images/blog-bg-18.jpg')" class="col-span-1 min-h-60"> </div>
 
   
 
 </section>
 
+<!--------Upcoming Travel Destinations----------->
+
+{% include upcoming-travel.html %}
 
 <!--------Featured Blog Posts----------->
 
 <section class="p-5p">
 
-  <h3 class="uppercase text-4xl text-center p-5p"> Recently on the blog... </h3>
+  <h3 class="uppercase text-4xl text-center pb-5p"> Recently on the blog... </h3>
 
   <div class="grid grid-cols-3">
-
-    
 
     {% assign featured_posts = site.posts | where: 'featured', true %}
 

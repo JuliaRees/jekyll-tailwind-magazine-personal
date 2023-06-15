@@ -8,19 +8,45 @@ layout: default
 
 <!--------This is the first intro section----------->
 
-<section class="grid grid-cols-3 p-5p justify-center text-center">
-    <p> by {{page.author}} </p>
-    <h1 class="text-4xl"> {{page.title}} </h1>
+<section class="grid grid-cols-5 p-5p items-center text-center border-b-2 border-black">
+ 
+    <div class="col-span-1">
+        <p > by {{page.author}} </p>
+    </div>
+
+    <div class="col-span-3 text-4xl">
+    <h1> {{page.title}} </h1>
+    </div>
+
+    <div class="col-span-1"></div>
     <p> {{ page.date | date_to_string }}  </p>
-    <hr class="border-t-6 border-black max-w-full">
+    </div>
+    
 </section>
 
 <!--------This is the main content section----------->
-<section class="p-8">
+<section class="p-8 blog-content">
     {{ content }}
 </section>
 
 <!--------This is a placeholder section to later add the related posts----------->
-<section class="p-8">
-    <p> Add related posts include here later </p>
+
+<section class="p-5p">
+    <h3 class="uppercase text-4xl text-center pb-5p"> Check out related blogs </h3>
+
+    <div class="grid grid-cols-3">
+        {% capture pageCategory %}{{ page.categories[0] }}{% endcapture %}
+        {% assign related_posts = site.categories[pageCategory] %}
+
+        {% for post in related_posts limit:3 %} <!----Insert Slider later---->
+
+        {% include blog-loop-item.html %}
+
+        {% endfor %}
+
+    </div>
+
 </section>
+
+
+
