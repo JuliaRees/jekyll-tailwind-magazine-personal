@@ -1,0 +1,22 @@
+<div>
+    <div class="relative aspect-landscape mb-2" id="before-and-after-slider">
+
+        <!-- After image in the foreground  -->
+        <div class="pointer-events-none absolute inset-0 bg-image bg-[length:50vw] bg-cover bg-left pointer-events-none" id="after-image"
+             style="background-image:url('{{page.comparison-images[0].after-image}}')"></div>
+
+        <!-- Before image in the background -->
+        <div class="pointer-events-none absolute inset-0 bg-image bg-[length:50vw] bg-left w-1/2 pointer-events-none" id="before-image"
+             style="background-image:url('{{page.comparison-images[0].before-image}}')"></div>
+         
+    </div>
+    <div class="grid grid-cols-6 gap-2" id="alt-image-grid">
+        {% for image in page.comparison-images %}
+        
+        <div class="col-span-1 aspect-landscape relative">
+            <img src="{{image.before-image}}" data-pre-image="{{image.after-image}}"
+                class="absolute inset-0 object-cover object-center h-full w-full">
+        </div>
+        {% endfor %}
+    </div>
+</div>

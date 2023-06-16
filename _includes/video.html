@@ -1,0 +1,31 @@
+<!-- Youtube & vimeo embed block  -->
+<!-- I've chosen to round the corners of the player, but you can remove the rounded and overflow classes to keep it square -->
+<div class="rounded-lg overflow-hidden">
+
+    <div class="plyr__video-embed" id="player">
+        <iframe
+          src="https://player.vimeo.com/video/{{include.vimeo-id}}?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+          allowfullscreen
+          allowtransparency
+          allow="autoplay"
+        ></iframe>
+    </div>
+  
+  </div>
+  
+  <!-- this is where you can adjust the style of the player, see the documetation here - https://github.com/sampotts/plyr -->
+  <style> 
+  
+  :root {
+    --plyr-color-main: #1ac266;
+    --plyr-control-icon-size: 0.8rem;
+  }
+  
+  </style>
+  
+  <!-- Essential Javascript & CSS -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css" />
+  <script src="https://cdn.plyr.io/3.7.3/plyr.polyfilled.js"></script>
+  <script>
+  const player = new Plyr('#player');
+  </script>

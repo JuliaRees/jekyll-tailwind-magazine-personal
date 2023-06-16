@@ -21,21 +21,16 @@ layout: default
 
 <!--------------Section Before and After------------------>
 
+
+
 <section class="grid grid-cols-3 p-5p">
 
-    <div class="col-span-2">
-        <div class="relative aspect-landscape">
-        <img src="{{page.featured-image}}" alt="{{page.featured-image-alt}}" class="absolute inset-0 h-full w-full object-cover">
-        </div>
-        <div class="grid grid-cols-6 gap-2">
-                <div class="border border-black">1</div> 
-                <div class="border border-black">2</div>
-                <div class="border border-black">3</div>
-                <div class="border border-black">4</div>
-                <div class="border border-black">5</div>
-                <div class="border border-black">6</div>
-        </div>
+    <div class="col-span-2 p-8">
+
+        {% include before-and-after-slider.html %}
+
     </div>
+    
 
     <div class="col-span-1 py-40 px-10">
 
@@ -46,11 +41,14 @@ layout: default
 
 </section>
 
+
+
 <!--------------Section How to Guide------------------>
 
-<section class="grid grid-cols-3 px-10p">
+<section class="grid grid-cols-3 px-5p">
 
-    <div class="col-span-1 py-40">
+    <div class="col-span-1 flex items-center ">
+        <div>
         <h3 class="uppercase font-serif text-4xl"> How to use your presets </h3>
         <ul class="list-disc py-3">
             <li> Lorem ipsum dolor sit </li>
@@ -61,10 +59,20 @@ layout: default
             <li> Lorem ipsum dolor sit </li>
             <li> Lorem ipsum dolor sit </li>
         </ul>
+        </div>
     </div>
 
-    <div class="col-span-2 relative">
-        <img src="{{page.featured-image}}" alt="{{page.featured-image-alt}}" class="absolute inset-0 h-full w-full object-cover">
+    <div class="col-span-2">
+
+        <div class="object-cover max-w-screen-xl mx-auto">
+
+        <div class="h-full w-full" style="background-image:url('/images/blog-bg-12.jpg');"> <!----Wenn man p-8 reinschreibt sieht man dass das bild dahinter ist-->
+            {% include video.html 
+                vimeo-id=site.data.presets-settings.presets-instructions-vimeo-id %}
+        </div>
+
+        </div>
+
     </div>
 
 </section>
@@ -97,10 +105,11 @@ layout: default
 
 <!--------------Related Products------------------>
 
-<section class="p-5p">
+<section>
     <h3 class="uppercase text-4xl text-center pb-5p"> Related products </h3>
 
     <div class="grid grid-cols-3">
+
         {% capture pageCategory %}{{ page.categories[0] }}{% endcapture %}
         {% assign related_products = site.categories[pageCategory] %}
 
