@@ -1,8 +1,12 @@
-<header class="flex justify-between p-5">
-    
-    <a href="/" class="logo text-5xl uppercase font-serif"> Logo </a>
-    
-    <nav class="flex items-center md:justify-center md:overflow-x-auto overflow-x-scroll md:flex-wrap flex-nowrap uppercase">
+<!-- Create a header element with some vertical & horizontal padding,
+      and then use flexbox to create space between the logo and the nav aligning them vertically -->
+<header class="py-8 px-5p flex justify-between items-center">
+ 
+<!-- link back to the homepage and apply some typography styling -->  
+    <a href="/" class="inline-block text-4xl uppercase font-serif tracking-wide"> Logo </a>
+
+<!-- we can apply these typography styles on the parent since they are inheritable styles -->    
+    <nav class="md:justify-center md:overflow-x-auto overflow-x-scroll md:flex-wrap flex-nowrap uppercase font-serif">
       <a href="/blog.html" class="p-4"> Blog </a>
       <a href="#" class="p-4"> Shop </a>
       <a href="#" class="p-4"> Members login </a>

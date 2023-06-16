@@ -1,0 +1,20 @@
+collections:
+  archives:
+    output: true
+  products:
+    output: true
+    permalink: /shop/:title
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:year/:slug
+  archives:
+    output: true
+    permalink: /achives/:slug
+  products-presets:
+    output: true
+    permalink: /shop/presets/:slug
+  products-guides:
+    output: true
+    permalink: /shop/guides/:slug

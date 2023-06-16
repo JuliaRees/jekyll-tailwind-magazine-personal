@@ -1,0 +1,151 @@
+---
+layout: default
+---
+
+<!--------------Intro Section------------------>
+
+<section class="grid grid-cols-2">
+
+    <div class="px-10p">
+        <h2 class="text-6xl pt-[50%] font-serif"> {{page.title}} </h2>
+        <h3 class="text-l py-3 uppercase"> {{page.subtitle}} </h3>
+        <p> {{page.description}} </p>
+        <a class="p-2 uppercase text-l bg-black text-light block inline-block" href="{{page.product-url}}"> Buy now </a>
+    </div>
+
+    <div class="relative">
+        <img src="{{page.featured-image}}" alt="{{page.featured-image-alt}}" class="absolute inset-0 h-full w-full object-cover">
+    </div>
+
+</section>
+
+<!--------------Section Before and After------------------>
+
+<section class="grid grid-cols-3 p-5p">
+
+    <div class="col-span-2">
+        <div class="relative aspect-landscape">
+        <img src="{{page.featured-image}}" alt="{{page.featured-image-alt}}" class="absolute inset-0 h-full w-full object-cover">
+        </div>
+        <div class="grid grid-cols-6 gap-2">
+                <div class="border border-black">1</div> 
+                <div class="border border-black">2</div>
+                <div class="border border-black">3</div>
+                <div class="border border-black">4</div>
+                <div class="border border-black">5</div>
+                <div class="border border-black">6</div>
+        </div>
+    </div>
+
+    <div class="col-span-1 py-40 px-10">
+
+        <h3 class="text-4xl uppercase font-serif"> Before & after </h3>
+        <p class="py-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. </p>
+
+    </div>
+
+</section>
+
+<!--------------Section How to Guide------------------>
+
+<section class="grid grid-cols-3 px-10p">
+
+    <div class="col-span-1 py-40">
+        <h3 class="uppercase font-serif text-4xl"> How to use your presets </h3>
+        <ul class="list-disc py-3">
+            <li> Lorem ipsum dolor sit </li>
+            <li> Lorem ipsum dolor sit </li>
+            <li> Lorem ipsum dolor sit </li>
+            <li> Lorem ipsum dolor sit </li>
+            <li> Lorem ipsum dolor sit </li>
+            <li> Lorem ipsum dolor sit </li>
+            <li> Lorem ipsum dolor sit </li>
+        </ul>
+    </div>
+
+    <div class="col-span-2 relative">
+        <img src="{{page.featured-image}}" alt="{{page.featured-image-alt}}" class="absolute inset-0 h-full w-full object-cover">
+    </div>
+
+</section>
+
+
+<!--------------FAQ's Section------------------>
+
+<section class="grid grid-cols-2 p-5p">
+
+    <div class="col-span-2 text-center pb-5p">
+    <h3 class="uppercase font-serif text-5xl"> Faq's </h3>
+    </div>
+
+    <div class="col-span-1 p-5p flex items-center ">
+
+        <p class="uppercase border-b-2 border-t-2 border-black py-4 mb-0"> Frequently asked questions - 1 </p>
+
+        <p class="uppercase border-b-2 border-black py-4 mb-0"> Frequently asked questions - 2 </p>
+
+        <p class="uppercase border-b-2 border-black py-4 mb-0"> Frequently asked questions - 3 </p>
+
+        <p class="uppercase border-b-2 border-black py-4 mb-0"> Frequently asked questions - 4 </p>
+    
+    </div>
+  
+</section>
+
+
+
+
+
+
+
+
+
+<!--------
+<section class="p-8"> 
+	Product:  {{page.title}} 
+	Price: {{page.price }}
+	Before: <img src="{{page.before-image}}">
+	After: <img src="{{page.after-image}}">
+</section> 
+--->
+
+<!-----
+Section - Intro Banner
+
+2 column section with text on the left and image on the right
+
+Variables with 
+h2 (product name)
+h3 (product subtitle)
+p (product description)
+hardcoded "buy now" with link (product url/javascript button)
+
+
+Section - Before and After 
+
+3 columns with first two image gallery on the left and text on the right
+
+gallery section - nested section 
+have each picture underneath with an array but make sure to make a comment for the client that they can only have 6
+
+h3 hardcoded
+p (product description)
+
+
+Section - How to use - hardcoded in datafile
+
+3 columns, first column text, second two columns will be video and background image as first up
+
+
+Section - FAQs - hardcoded in datafile (all preset things in one datafile)
+
+h3
+pull down
+
+
+Sectin - related products 
+
+Same as related posts 
+
+
+------>

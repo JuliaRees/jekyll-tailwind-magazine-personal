@@ -1,6 +1,0 @@
-collections:
-  archives:
-    output: true
-  products:
-    output: true
-    permalink: /shop/:title

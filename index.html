@@ -16,28 +16,40 @@ seo:
   hide-from-google: false
 ---
 
+<!------------------
+Man hätte das oben auch so organisieren können:
+layout: default 
+banner: 
+	heading: A whole new world
+	subtitle:  Lorem ipsum dolor sit amet consectetur adipisicing elit et accusantium explicabo itaque cupiditate, recusandae.
+	banner-image: /images/placeholder-1.jpg 
+-->
+
 <!--------Header Banner----------->
 
 {% include quarter-header-banner.html %}
 
 <!--------Text Section----------->
 
-<section class="grid grid-cols-2 p-5p bg-light">
+<section class="p-5p bg-stone-100">
 
-  <div style="background-image: url('/images/blog-bg-13.jpg')" class="col-span-1 min-h-90"> </div>
+  <div class="grid grid-cols-2 max-w-screen-xl mx-auto">
+    
+      <div class="bg-image bg-cover bg-center" style="background-image: url('{{page.about-image}}')"> 
+      </div>
 
-  <div class="col-span-1 p-5p flex items-center">
-    <div>
-
-      <h2 class="text-6xl bg-[#d4d1cd] relative w-[30rem] left-[-14rem] p-8 text-center my-2 font-serif"> A fascinating heading about the site. </h2>
+      <div class="py-15p px-8">
+    
+          <h2 class="p-8 text-center text-5xl -ml-[20%] bg-stone-200 max-w-sm"> A fascinating heading about the site. </h2>
       
-      <p class="pr-[20%] mt-8"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima libero, commodi harum sit exercitationem doloribus amet sequi reiciendis? Dolore velit rerum dolores enim cupiditate harum optio explicabo delectus aliquam eius.</p>
+          <p > Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima libero, commodi harum sit exercitationem doloribus amet sequi reiciendis? Dolore velit rerum dolores enim cupiditate harum optio explicabo delectus aliquam eius.</p>
       
-      <a href="#" class="text-2xl border-b-2 border-black uppercase font-serif"> Read more </a>
+          <a href="#" class="text-2xl border-b-2 border-black uppercase font-serif tracking-wide "> Read more </a>
     </div>
   
   </div>
 
+</div>
 </section>
 
 <!--------Futher Text Section----------->
@@ -85,3 +97,4 @@ seo:
 
 
 </section>
+
