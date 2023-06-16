@@ -10,5 +10,7 @@ featured-image: /images/blog-bg-3.jpg
 featured-image-alt: desert picture
 before-image: /images/blog-bg-3.jpg
 after-image: /images/blog-bg-4.jpg
+categories:
+  - preset
 ---
 

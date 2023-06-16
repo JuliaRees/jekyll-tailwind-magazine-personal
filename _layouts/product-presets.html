@@ -72,27 +72,47 @@ layout: default
 
 <!--------------FAQ's Section------------------>
 
-<section class="grid grid-cols-2 p-5p">
+<section class="p-5p">
 
-    <div class="col-span-2 text-center pb-5p">
-    <h3 class="uppercase font-serif text-5xl"> Faq's </h3>
-    </div>
+    <h3 class="uppercase font-serif text-5xl text center"> Faq's </h3>
 
-    <div class="col-span-1 p-5p flex items-center ">
+    <div>
 
-        <p class="uppercase border-b-2 border-t-2 border-black py-4 mb-0"> Frequently asked questions - 1 </p>
+        <hr class="border-black">
 
-        <p class="uppercase border-b-2 border-black py-4 mb-0"> Frequently asked questions - 2 </p>
+        {% for item in site.data.how-to %}
 
-        <p class="uppercase border-b-2 border-black py-4 mb-0"> Frequently asked questions - 3 </p>
-
-        <p class="uppercase border-b-2 border-black py-4 mb-0"> Frequently asked questions - 4 </p>
+        <div class="py-3 flex justify-between text-xl">
+            <h3> {{item.question}} </h3>
+            <h3> > </h3>
+        </div>
+        
+        <hr class="border-black">
+    
+        {% endfor %}
     
     </div>
   
 </section>
 
+<!--------------Related Products------------------>
 
+<section class="p-5p">
+    <h3 class="uppercase text-4xl text-center pb-5p"> Related products </h3>
+
+    <div class="grid grid-cols-3">
+        {% capture pageCategory %}{{ page.categories[0] }}{% endcapture %}
+        {% assign related_products = site.categories[pageCategory] %}
+
+        {% for post in related_posts limit:3 %} 
+
+        {% include blog-loop-item.html %}
+
+        {% endfor %}
+
+    </div>
+
+</section>
 
 
 
