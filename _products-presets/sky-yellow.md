@@ -1,13 +1,13 @@
 ---
 layout: products-presets
-slug: desert-glow
-title: Desert Glow
-subtitle: Loving the desert
+slug: sky-yellow
+title: Sky Yellow
+subtitle: If only yellow were a country
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos vitae consequuntur quia, nemo quidem temporibus facilis illo doloribus quis quam quaerat? Blanditiis, quod est neque nulla cumque eveniet dolorem!
 url: https://www.google.com
 price: $35
-featured-image: /images/blog-bg-3.jpg
-featured-image-alt: desert picture
+featured-image: /images/blog-bg-5.jpg
+featured-image-alt: yellow picture
 comparison-images:
   - before-image: /images/blog-bg-1.jpg
     after-image: /images/blog-bg-2.jpg

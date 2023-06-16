@@ -49,8 +49,8 @@ layout: default
 
     <div class="col-span-1 flex items-center ">
         <div>
-        <h3 class="uppercase font-serif text-4xl"> How to use your presets </h3>
-        <ul class="list-disc py-3">
+        <h3 class="uppercase font-serif text-4xl mr-40"> How to use your presets </h3>
+        <ul class="list-disc py-3 list-inside">
             <li> Lorem ipsum dolor sit </li>
             <li> Lorem ipsum dolor sit </li>
             <li> Lorem ipsum dolor sit </li>
@@ -80,9 +80,9 @@ layout: default
 
 <!--------------FAQ's Section------------------>
 
-<section class="p-5p">
+<section class="p-5p pb-0">
 
-    <h3 class="uppercase font-serif text-5xl text center"> Faq's </h3>
+    <h3 class="uppercase font-serif text-5xl text center py-3"> Faq's </h3>
 
     <div>
 
@@ -92,7 +92,8 @@ layout: default
 
         <div class="py-3 flex justify-between text-xl">
             <h3> {{item.question}} </h3>
-            <h3> > </h3>
+            <i class="iconoir-fast-arrow-right"></i>
+
         </div>
         
         <hr class="border-black">
@@ -105,76 +106,26 @@ layout: default
 
 <!--------------Related Products------------------>
 
-<section>
+<section class="p-5p">
+
     <h3 class="uppercase text-4xl text-center pb-5p"> Related products </h3>
-
+  
     <div class="grid grid-cols-3">
-
-        {% capture pageCategory %}{{ page.categories[0] }}{% endcapture %}
-        {% assign related_products = site.categories[pageCategory] %}
-
-        {% for post in related_posts limit:3 %} 
-
-        {% include blog-loop-item.html %}
-
+    
+        {% for product in site.products-presets limit:3 %} <!----Insert Slider later---->
+  
+        {% include product-loop-item.html %}
+          
         {% endfor %}
-
+  
     </div>
-
-</section>
-
-
-
+  
+  
+  </section>
 
 
 
 
-<!--------
-<section class="p-8"> 
-	Product:  {{page.title}} 
-	Price: {{page.price }}
-	Before: <img src="{{page.before-image}}">
-	After: <img src="{{page.after-image}}">
-</section> 
---->
-
-<!-----
-Section - Intro Banner
-
-2 column section with text on the left and image on the right
-
-Variables with 
-h2 (product name)
-h3 (product subtitle)
-p (product description)
-hardcoded "buy now" with link (product url/javascript button)
 
 
-Section - Before and After 
 
-3 columns with first two image gallery on the left and text on the right
-
-gallery section - nested section 
-have each picture underneath with an array but make sure to make a comment for the client that they can only have 6
-
-h3 hardcoded
-p (product description)
-
-
-Section - How to use - hardcoded in datafile
-
-3 columns, first column text, second two columns will be video and background image as first up
-
-
-Section - FAQs - hardcoded in datafile (all preset things in one datafile)
-
-h3
-pull down
-
-
-Sectin - related products 
-
-Same as related posts 
-
-
------->

@@ -7,12 +7,14 @@ author: James
 featured: true
 categories: 
  - travel
-featured_image: /images/travel-2.jpg
-banner-image: /images/travel-4.jpg
+featured_image: /images/blog-bg-10.jpg
+banner-image: /images/blog-bg-10.jpg
+background-position: bg-center
 text-position: items-center
+text-color: text-white
 banner-height: min-h-80
-heading: A whole new world
-sub-heading: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
+heading: Exploring Sumbawa
+sub-heading: Nature teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
 seo: 
     title: 
     description: 

@@ -1,0 +1,17 @@
+<div class="p-5p">
+    <a href="{{ product.url }}">
+        <div class="aspect-square relative">
+            <img src="{{ product.featured-image }}" alt="" class="absolute w-full h-full inset-0 object-cover">
+        </div>
+
+        <p>
+            {% for item in product.categories %}
+                <span class="tag mr-2"> {{item}} </span>
+            {% endfor %}
+        </p>
+
+        <h3 class="text-3xl py-4"> {{ product.title }}</h3>
+        <p> {{ product.description }}</p>
+        <span> {{product.price}} </span>
+    </a>
+</div>
