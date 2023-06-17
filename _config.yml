@@ -43,7 +43,7 @@ _options:
     strike: true
     image: true
 
-content_html:
+  content_html:
     styles: /editor.css
     blockquote: true
     horizontalrule: true
