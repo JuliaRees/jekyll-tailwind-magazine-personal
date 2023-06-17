@@ -10,7 +10,9 @@ layout: default
         <h2 class="text-6xl pt-[50%] font-serif"> {{page.title}} </h2>
         <h3 class="text-l py-3 uppercase"> {{page.subtitle}} </h3>
         <p> {{page.description}} </p>
-        <a class="p-2 uppercase text-l bg-black text-light block inline-block" href="{{page.product-url}}"> Buy now </a>
+        
+        {% include buy-button.html buy-button-id=page.buy-button-id %}
+
     </div>
 
     <div class="relative">
