@@ -21,8 +21,8 @@ members-content:
 
 <section class="min-h-80 p-5p grid grid-cols-4">
 
-    <div class="col-span-1">
-            <h4 class="font-serif uppercase"> Explore </h4>
+    <div class="col-span-1 border-r-2 border-white">
+            <h4 class="font-serif uppercase text-3xl mb-px"> Explore </h4>
             {% for item in page.members-content %}
             <a href="#{{item.title | slugify }}" class="block"> {{item.title}}</a>
             {% endfor %}
