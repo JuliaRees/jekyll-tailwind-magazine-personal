@@ -9,7 +9,7 @@ featured: true
 categories:
   - travel
   - life
-featured_image: /images/travel-1.jpg
+featured_image: /images/blog-bg-18.jpg
 page_blocks:
   - _id: banner
     title: Image Banner

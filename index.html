@@ -7,6 +7,7 @@ banner-height: min-h-80
 banner-image: /images/blog-bg-12.jpg
 heading: A whole new world
 sub-heading: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
+text-image: /images/blog-bg-13.jpg
 seo:
   title: 
   description:
@@ -31,11 +32,11 @@ banner:
 
 <!--------Text Section----------->
 
-<section class="p-5p bg-stone-100">
+<section class="p-5p bg-[#e5e2de]">
 
   <div class="grid grid-cols-2 max-w-screen-xl mx-auto">
     
-      <div class="bg-image bg-cover bg-center" style="background-image: url('{{page.about-image}}')"> 
+      <div class="bg-image bg-cover bg-center" style="background-image: url('{{page.text-image}}')"> 
       </div>
 
       <div class="py-15p px-8">
@@ -52,7 +53,7 @@ banner:
 </div>
 </section>
 
-<!--------Futher Text Section----------->
+<!--------Futher Text Section
 
 
 <section class="grid grid-cols-2 p-5p bg-white">
@@ -73,15 +74,17 @@ banner:
 
 </section>
 
+----------->
+
 <!--------Upcoming Travel Destinations----------->
 
 {% include upcoming-travel.html %}
 
 <!--------Featured Blog Posts----------->
 
-<section class="p-5p">
+<section class="p-5p bg-[#e5e2de]">
 
-  <h3 class="uppercase text-4xl text-center pb-5p"> Recently on the blog... </h3>
+  <h3 class="uppercase text-4xl text-center pb-5p "> Recently on the blog... </h3>
 
   <div class="grid grid-cols-3">
 

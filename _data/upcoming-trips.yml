@@ -1,8 +1,9 @@
-- country: Japan
-  dates: 11 Jan - 19 Jan 2023
-- country: Asia
-  dates: 11 Jan - 19 Jan 2023
-- country: Germany
-  dates: 11 Jan - 19 Jan 2023
-- country: France
-  dates: 11 Jan - 19 Jan 2023
+trips:
+- title: Japan
+  description: 11 Jan - 19 Jan 2023
+- title: Asia
+  description: 11 Jan - 19 Jan 2023
+- title: Germany
+  description: 11 Jan - 19 Jan 2023
+- title: France
+  description: 11 Jan - 19 Jan 2023

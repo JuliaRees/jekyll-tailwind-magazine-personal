@@ -8,7 +8,7 @@ url: https://www.google.com
 price: $35
 before-image: /images/blog-bg-1.jpg
 after-image: /images/blog-bg-2.jpg
-featured-image: /images/blog-bg-4.jpg
+featured-image: /images/blog-bg-3.jpg
 featured-image-alt: ocean picture
 comparison-images:
   - before-image: /images/blog-bg-1.jpg

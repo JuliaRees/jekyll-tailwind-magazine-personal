@@ -5,7 +5,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sun
 author: Catherine
 featured: true
 categories: [life, self care]
-featured_image: /images/travel-1.jpg
+featured_image: /images/blog-bg-13.jpg
 seo: 
     title: 
     description: 

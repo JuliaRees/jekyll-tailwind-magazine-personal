@@ -9,7 +9,7 @@ featured: true
 categories:
   - self care
   - food
-featured_image: /images/travel-1.jpg
+featured_image: /images/blog-bg-11.jpg
 seo:
   title:
   description:
