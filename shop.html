@@ -1,23 +1,72 @@
 ---
-layout: default 
+layout: default
+title: Shop
+background-position: bg-bottom
+text-position: items-center
+banner-height: min-h-80
+banner-image: /images/blog-bg-17.jpg
+heading: Curated Collection
+sub-heading: Nature teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
+seo:
+  title: 
+  description:
+  social_image:
+  twitter_card:
+  keywords:
+  hide-from-google: false
 ---
 
-<section class="p-8 max-w-screen-xl mx-auto">
+<!--------Header Banner----------->
 
-	<h2> Shop all presets </h2> 
-	
-	<div class="grid grid-cols-3 gap-4">
-	
-		{% for product in site.products-presets %}
-		
-		<a href="{{product.url}}"> 
-			<img src="{{product.after-image}}">
-			<h4> {{product.title}}</h4>
-			<p> {{product.price}}</p>
-		</a>
-	
-	{% endfor %}
-	
-	</div>
-	
-</section>
+{% include header-banner.html %}
+
+<!--------------Travel Guides------------------>
+
+<section class="p-5p">
+
+    <h3 class="uppercase text-4xl text-center pb-5p font-serif"> Travel guides </h3>
+  
+    <div class="grid grid-cols-3">
+    
+        {% for product in site.products-guides limit:3 %} 
+  
+        {% include product-loop-item.html %}
+          
+        {% endfor %}
+  
+    </div>
+
+	<a href="#" class="text-2xl border-b-2 border-black uppercase font-serif"> Buy now </a>
+  
+  
+  </section>
+
+
+<!----image banner block---->
+<section class="p-5p bg-cover bg-center min-h-60 text-white flex items-center" style="background-image: url('/images/blog-bg-10.jpg')">
+    <div> 
+
+       <h3 class="text-4xl font-serif font-light max-w-md"> "Once you get a taste for travel, you'll never be the same." </h3>       
+
+    </div> 
+</section> 
+
+
+<!--------------Presets------------------>
+
+<section class="p-5p">
+
+    <h3 class="uppercase text-4xl text-center pb-5p"> Lightroom presets </h3>
+  
+    <div class="grid grid-cols-3">
+    
+        {% for product in site.products-presets limit:3 %}
+  
+        {% include product-loop-item.html %}
+          
+        {% endfor %}
+  
+    </div>
+  
+  
+  </section>

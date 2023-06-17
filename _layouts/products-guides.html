@@ -1,0 +1,102 @@
+---
+layout: default
+---
+
+<!--------------Intro Section------------------>
+
+<section class="grid grid-cols-2">
+
+    <div class="px-10p">
+        <h2 class="text-6xl pt-[50%] font-serif"> {{page.title}} </h2>
+        <h3 class="text-l py-3 uppercase"> {{page.subtitle}} </h3>
+        <p> {{page.description}} </p>
+        <a class="p-2 uppercase text-l bg-black text-light block inline-block" href="{{page.product-url}}"> Buy now </a>
+    </div>
+
+    <div class="relative">
+        <img src="{{page.featured-image}}" alt="{{page.featured-image-alt}}" class="absolute inset-0 h-full w-full object-cover">
+    </div>
+
+</section>
+
+
+<!--------------Section What's Inside------------------>
+
+<section class="p-5p">
+
+    <div>
+        <div class="relative mb-2" id="before-and-after-slider">
+    
+        <!-- Big main image -->
+            <div class="bg-image bg-cover aspect-landscape" id="before-image"
+                 style="background-image:url('{{page.book-inside[0]}}')"></div>
+             
+        </div>
+
+        <div class="grid grid-cols-6 gap-2" id="alt-image-grid">
+            {% for image in page.book-inside %}
+            
+            <div class="col-span-1 aspect-landscape relative">
+                <img src="{{image}}"
+                    class="absolute inset-0 object-cover object-center h-full w-full">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+</section>
+
+
+<!--------------Table of contents & what's included------------------>
+
+<section class="grid grid-cols-5 p-5p">
+
+    <div class="col-span-3">
+
+        <h3 class="uppercase font-serif text-5xl text center"> Table of contents </h3>
+        
+            <div class="max-w-screen-xl mx-auto">
+        
+                {% include accordion.html  accordion-source=site.data.guides-settings.contents %}
+        
+            </div>
+        
+    </div>
+
+    <div class="col-span-2">
+
+            <div>
+                <h3 class="uppercase font-serif text-4xl mr-40 uppercase"> What's included </h3>
+                <ul class="list-disc py-3 list-inside">
+                    <li> Lorem ipsum dolor sit </li>
+                    <li> Lorem ipsum dolor sit </li>
+                    <li> Lorem ipsum dolor sit </li>
+                    <li> Lorem ipsum dolor sit </li>
+                    <li> Lorem ipsum dolor sit </li>
+                    <li> Lorem ipsum dolor sit </li>
+                    <li> Lorem ipsum dolor sit </li>
+                </ul>
+            </div>
+
+    </div>
+
+</section>
+
+<!--------------Related Products------------------>
+
+<section class="p-5p">
+
+    <h3 class="uppercase text-4xl text-center pb-5p"> Related products </h3>
+  
+    <div class="grid grid-cols-3">
+    
+        {% for product in site.products-guides limit:3 %} 
+  
+        {% include product-loop-item.html %}
+          
+        {% endfor %}
+  
+    </div>
+  
+  
+  </section>

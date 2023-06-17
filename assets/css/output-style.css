@@ -411,6 +411,34 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
 .pointer-events-none {
   pointer-events: none;
 }
@@ -476,6 +504,9 @@ video {
 .mr-2 {
   margin-right: 0.5rem;
 }
+.mr-24 {
+  margin-right: 6rem;
+}
 .mr-40 {
   margin-right: 10rem;
 }
@@ -487,9 +518,6 @@ video {
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.mr-24 {
-  margin-right: 6rem;
 }
 .block {
   display: block;
@@ -503,6 +531,9 @@ video {
 .grid {
   display: grid;
 }
+.contents {
+  display: contents;
+}
 .aspect-landscape {
   aspect-ratio: 3 / 2;
 }
@@ -514,6 +545,9 @@ video {
 }
 .h-full {
   height: 100%;
+}
+.max-h-0 {
+  max-height: 0px;
 }
 .min-h-100 {
   min-height: 100vh;
@@ -600,9 +634,6 @@ video {
 .gap-2 {
   gap: 0.5rem;
 }
-.gap-4 {
-  gap: 1rem;
-}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -615,8 +646,14 @@ video {
 .rounded-lg {
   border-radius: 0.5rem;
 }
+.border-b {
+  border-bottom-width: 1px;
+}
 .border-b-2 {
   border-bottom-width: 2px;
+}
+.border-t {
+  border-top-width: 1px;
 }
 .border-t-2 {
   border-top-width: 2px;
@@ -624,6 +661,10 @@ video {
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+.border-zinc-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(39 39 42 / var(--tw-border-opacity));
 }
 .bg-\[\#d4d1cd\] {
   --tw-bg-opacity: 1;
@@ -725,12 +766,22 @@ video {
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.pb-0 {
+  padding-bottom: 0px;
+}
 .pb-5p {
   padding-bottom: 5%;
+}
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 .pr-\[20\%\] {
   padding-right: 20%;
@@ -740,9 +791,6 @@ video {
 }
 .pt-\[50\%\] {
   padding-top: 50%;
-}
-.pb-0 {
-  padding-bottom: 0px;
 }
 .text-left {
   text-align: left;
@@ -812,6 +860,14 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 /* Custom CSS */
