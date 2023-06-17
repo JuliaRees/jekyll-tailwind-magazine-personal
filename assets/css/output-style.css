@@ -823,6 +823,9 @@ video {
 .pb-6 {
   padding-bottom: 1.5rem;
 }
+.pb-\[5\%\] {
+  padding-bottom: 5%;
+}
 .pr-\[20\%\] {
   padding-right: 20%;
 }
