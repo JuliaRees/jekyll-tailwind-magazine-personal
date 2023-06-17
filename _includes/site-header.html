@@ -6,11 +6,15 @@
     <a href="/" class="inline-block text-4xl uppercase font-serif tracking-wide"> Logo </a>
 
 <!-- we can apply these typography styles on the parent since they are inheritable styles -->    
-    <nav class="md:justify-center md:overflow-x-auto overflow-x-scroll md:flex-wrap flex-nowrap uppercase font-serif">
+    <nav class="md:justify-center md:overflow-x-auto overflow-x-scroll md:flex-wrap flex-nowrap uppercase font-serif hidden sm:flex">
       <a href="/blog" class="p-4"> Blog </a>
       <a href="/shop" class="p-4"> Shop </a>
       <a href="/members-login" class="p-4"> Members login </a>
     </nav>
+
+    <div class="sm:hidden">
+    {% include drop-down-menu.html %}
+    </div>
 
 </header>
   

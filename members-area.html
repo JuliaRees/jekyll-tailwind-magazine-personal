@@ -1,7 +1,71 @@
 ---
 layout: default
+members-content: 
+    - title: This is a title
+      content_html: some content 
+    - title: This is a second title 
+      content_html: some content 
+    - title: This is a third title 
+      content_html: some content
 ---
 
-<section class="min-h-80 p-5p"> 
-    Put your secret things here! 
+<!----image banner block---->
+
+<section class="p-5p bg-cover bg-center min-h-40 text-white flex items-center" style="background-image: url('/images/blog-bg-17.jpg')">
+    <div> 
+
+       <h3 class="text-5xl font-serif text-white max-w-md"> Members area </h3>    
+       <h4 class="text-xl text-white max-w-md"> Welcome to our pivate members area </h4>   
+
+    </div> 
+</section> 
+
+<section class="min-h-80 p-5p grid grid-cols-4">
+
+    <div class="col-span-1">
+            <h4 class="font-serif uppercase"> Explore </h4>
+            {% for item in page.members-content %}
+            <a href="#{{item.title | slugify }}" class="block"> {{item.title}}</a>
+            {% endfor %}
+
+    </div> 
+
+    <div class="col-span-3">
+
+        {% for item in page.members-content %}
+        <div id="{{item.title | slugify}}" class="p-5p border-b-2"> 
+            {{ item.content_html }}
+        </div>
+
+        {% endfor %}
+
+    </div> 
+    
 </section>
+
+
+
+<!----
+
+
+
+<section class="p-5p grid grid-cols-3">
+
+    <div class="col-1">
+
+        <h4 class="text-xl max-w-md"> Features </h4>
+
+    </div>
+
+    <div class="col-2">
+
+
+
+    </div>
+
+</section>
+
+------------>
+
+
+      
