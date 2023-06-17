@@ -18,4 +18,5 @@ book-inside:
   - /images/blog-bg-2.jpg
   - /images/blog-bg-1.jpg
   - /images/blog-bg-2.jpg
+hover-image: /images/blog-bg-3.jpg
 ---

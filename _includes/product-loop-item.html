@@ -1,7 +1,7 @@
 <div class="p-5p">
     <a href="{{ product.url }}">
-        <div class="aspect-square relative">
-            <img src="{{ product.featured-image }}" alt="" class="absolute w-full h-full inset-0 object-cover">
+        <div class="aspect-square relative bg-center bg-cover" style="background-image:url('{{ product.hover-image }}')">
+            <img src="{{ product.featured-image }}" alt="{{product.title}}" class="absolute w-full h-full inset-0 object-cover hover:opacity-0 transition-opacity duration-500">
         </div>
 
         <p>
@@ -15,3 +15,6 @@
         <span> {{product.price}} </span>
     </a>
 </div>
+
+
+
