@@ -11,6 +11,7 @@ featured-image: /images/blog-bg-2.jpg
 featured-image-alt: e-book europe
 categories:
   - products
+type: travel-guide
 book-inside:
   - /images/blog-bg-1.jpg
   - /images/blog-bg-2.jpg

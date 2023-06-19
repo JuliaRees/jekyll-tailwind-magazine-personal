@@ -26,6 +26,7 @@ comparison-images:
     after-image: /images/blog-bg-12.jpg
 categories:
   - preset
+type: preset
 ---
 
 

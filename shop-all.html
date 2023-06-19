@@ -1,0 +1,51 @@
+---
+layout: default
+title: Shop All
+background-position: bg-bottom
+text-position: items-center
+banner-height: min-h-80
+banner-image: /images/blog-bg-17.jpg
+pre-heading: Shop our
+heading: Curated Collection
+sub-heading: Nature teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
+seo:
+  title: 
+  description:
+  social_image:
+  twitter_card:
+  keywords:
+  hide-from-google: false
+---
+
+<!--------Header Banner----------->
+
+{% include header-banner.html %}
+
+<!------------Shop all------------->
+
+<section class="p-5p max-w-screen-xl mx-auto" x-data="{ filter: 'all' }">
+
+	<h2 class="text-center text-4xl mb-4 font-serif"> Shop all products </h2> 
+
+	<div class="filter text-center"> 
+		<a href="#" :class="{'active':filter === 'all'}" @click.prevent="filter = 'all'" class="tag border border-black p-2">All</a>
+        <a href="#" :class="{'active':filter === 'travel-guide'}" @click.prevent="filter = 'travel-guide'" class="tag border border-black p-2">Travel Guides</a>
+        <a href="#" :class="{'active':filter === 'preset'}" @click.prevent="filter = 'preset'" class="tag border border-black p-2">Presets </a>
+	</div>
+
+	<div class="grid grid-cols-3 gap-4">
+
+    <!----------Combine the two collections into one mega collection--------->    
+	{% assign all_products = site.products-guides | concat: site.products-presets | sort: 'title'  %}
+
+	{% for product in all_products %}
+		
+		<div class="{{product.type | slugify }}" x-show="filter === 'all' || filter === '{{ product.type | slugify }}'">
+		{% include product-loop-item.html type=product.type  %}
+		</div>
+			
+	{% endfor %}
+
+	</div>
+
+</section>

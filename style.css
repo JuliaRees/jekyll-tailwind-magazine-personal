@@ -85,3 +85,7 @@ p {
     margin-right: 20%;
     margin-left: 20%;
 }
+
+.filter .active {
+    @apply font-bold 
+}

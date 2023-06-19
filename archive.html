@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog Collection
+title: Archive
 background-position: bg-center
 text-position: items-center
 banner-height: min-h-[80]
@@ -21,25 +21,26 @@ seo:
 {% include header-banner.html %}
 
 
-<!--------Blog Archive Section----------->
-
-<section class="p-5p">
-
-    <div class="max-w-screen-xl mx-auto md:columns-3">
-
-        {% assign featured_posts = site.posts | where: 'featured', true %}
-
-        {% for post in featured_posts limit:12 %}
-
-            <a class="p-2 "
-            href="{{ post.url }}">
-
-
-
-            </a>
-
-        {% endfor %}
-
+<section class="p-5p archive" x-data="{ search: '', posts: [...document.querySelectorAll('.post')] }" x-on:input="filterPosts">
+    <div class="max-w-screen-lg mx-auto p-2 center mb-8 text-center">
+        <h2 class="font-serif text-4xl mb-2"> Explore the blog </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quaerat necessitatibus? Praesentium fugit ex neque magni, possimus, iste itaque voluptatem id doloremque voluptas consequatur dolor cumque! Dolores possimus laboriosam adipisci.</p>
+   
+        <div class="filter relative my-4 inline-block"> 
+            <input type="text" x-model="search" placeholder="Search..." class="p-4">
+        </div>
     </div>
 
+    <div class="max-w-screen-lg mx-auto grid grid-cols-3">
+
+        {% for post in site.posts limit:100 %}
+
+                <!------ check in blog-loop-item.html for the h3 and you can filter for p if you want ------>
+
+        <div class="post" x-show="search === '' || $el.querySelector('h3').textContent.toLowerCase().includes(search.toLowerCase())">
+            {% include blog-loop-item.html %}
+        </div>
+
+        {% endfor %}
+    </div>
 </section>
